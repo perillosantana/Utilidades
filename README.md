@@ -1,4 +1,4 @@
 Utilidades
 ==========
 
-Utilidades como JS, Códigos, etc.
+Utilidades como JS, Códigos em geral, etc.
