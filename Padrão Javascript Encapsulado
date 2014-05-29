@@ -1,0 +1,39 @@
+(function (window, document, $) {
+    var Nome = function () {
+        //VARIAVEIS
+        var varaiveis;
+
+        //DISPOSE
+        function dispose() {
+
+        }
+
+        //VARIAVEIS INICIAR
+        function variaveisIniciar() {
+
+        }
+
+
+
+        function eventosIniciar() {
+
+        }
+
+        function iniciarPrivado() {
+            variaveisIniciar();
+
+            eventosIniciar();
+        }
+
+        //INICIAR PUBLICO
+        this.disposePublico = function () {
+            dispose();
+        };
+
+        this.iniciarPublico = function () {
+            iniciarPrivado();
+        };
+    };
+    window.Nome = new Nome();
+    window.Nome.iniciarPublico();
+}(window, document, jQuery));
