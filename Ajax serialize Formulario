@@ -1,0 +1,28 @@
+//setamos para quando submeter não atualizar a pagina   
+evt.preventDefault();
+
+//O serialize retorna uma string pronta para ser enviada
+var valores = $('#form').serialize()
+console.log(valores);
+
+
+//iniciamos o ajax
+$.ajax({
+    //definimos a url
+    url: 'Home/Salvar',
+    //definimos o tipo de requisição
+    type: 'post',
+    //definimos o tipo de retorno
+    dataType: 'html',
+    //colocamos os valores a serem enviados
+    data: valores,
+    //antes de enviar ele alerta para esperar
+    beforeSend: function () {
+        $('#carregando').show('100');
+    },
+    //colocamos o retorno na tela
+    success: function (pre) {
+        $('#carregando').hide('100');
+        $('#retorno').find('strong').text(pre).end().show(100);
+    }
+});
