@@ -34,6 +34,7 @@
             iniciarPrivado();
         };
     };
+    
     window.Nome = new Nome();
     window.Nome.iniciarPublico();
 }(window, document, jQuery));
