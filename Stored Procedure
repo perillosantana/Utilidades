@@ -1,0 +1,44 @@
+//Inserir Dados.
+
+CREATE PROCEDURE dbo.NomeDaProcedure
+(
+@nomeVariavel Tipo(int, nvarchar, etc)(tamanho da string)
+)
+AS
+Insert into NomeDaTabela(Campos da Tabela) values 
+(nomeVariavel)
+RETURN
+
+
+//Atualizar Dados.
+
+CREATE PROCEDURE dbo.NomeDaProcedure
+(
+@nomeVariavel Tipo(int, nvarchar, etc)(tamanho da string),
+@Id int
+)
+AS
+	UPDATE NomeDaTabela set CamposdaTabela=@nomeVariavel where Id=@Id
+RETURN
+
+
+//Deletar Dados.
+
+CREATE PROCEDURE dbo.NomeDaProcedure
+(
+@Id int
+)
+AS
+DELETE
+    FROM dbo.NomeDaTabela
+    WHERE  
+    Id = @Id
+RETURN
+
+
+//Carregar Dados
+
+CREATE PROCEDURE dbo.NomeDaProcedure
+AS
+    select * from NomeDaTabela
+RETURN
